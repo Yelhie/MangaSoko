@@ -3,5 +3,5 @@ import { DataSource } from 'typeorm';
 
 @Injectable()
 export class DatabaseService {
-    constructor(private dataSource: DataSource) {}
+  constructor(private dataSource: DataSource) {}
 }
