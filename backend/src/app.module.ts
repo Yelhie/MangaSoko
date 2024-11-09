@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { DatabaseService } from './database/database.service';
+import { MangaModule } from './modules/manga/manga.module';
 import * as dotenv from 'dotenv';
+import { Manga } from './modules/manga/entities/manga.entity';
 
 dotenv.config();
 
@@ -16,11 +16,13 @@ dotenv.config();
       username: process.env.DATABASE_USERNAME,
       password: process.env.DATABASE_PASSWORD,
       database: process.env.DATABASE_NAME,
-      entities: [__dirname + '/**/*.entity{.ts,.js}'],
+      entities: [Manga, __dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
     }),
+    MangaModule,
   ],
-  controllers: [AppController],
-  providers: [AppService, DatabaseService],
+  controllers: [],
+  providers: [DatabaseService],
+  exports: [],
 })
 export class AppModule {}
