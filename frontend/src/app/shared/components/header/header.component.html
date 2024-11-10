@@ -1,0 +1,32 @@
+<header>
+  <div class="header-left">
+    <img alt="logo MangaSoko" class="logo" src="/logosoko.webp" />
+  </div>
+
+  <nav class="header-right">
+    <ul class="nav-top">
+      @for (link of navigationLinks(); track link.path) {
+        <li>
+          <a [routerLink]="link.path">{{ link.label }}</a>
+        </li>
+      }
+      <li class="account-icon">
+        <app-account-icon alt="Account Icon"></app-account-icon>
+      </li>
+      <li class="theme-icon">
+        <app-sun-icon
+          (click)="toggleDarkMode()"
+          [attr.aria-label]="darkMode() ? 'Activer le mode clair' : 'Activer le mode sombre'"
+          alt="Dark Mode Icon"
+        ></app-sun-icon>
+      </li>
+    </ul>
+    <ul class="nav-bottom">
+      <li><input placeholder="Rechercher" type="text" /></li>
+      <li class="shopping-icon">
+        <app-shopping-icon alt="shopping Icon"></app-shopping-icon>
+      </li>
+    </ul>
+  </nav>
+</header>
+
