@@ -32,9 +32,9 @@ Projet personnel de création d'un site d'e-commerce de Manga en Fullstack.
 
 **Home page**
 
-![Manga Soko home page](https://github.com/Yelhie/MangaSoko/blob/master/screenshots/mangasoko_240619.jpg)
+![Manga Soko home page](https://github.com/Yelhie/MangaSoko/blob/main/screenshots/mangasoko_240619.jpg)
 
 ## Informations supplémentaires
 
 - Design : [@Yelhie](https://github.com/Yelhie)
-- Liste des Artistes et oeuvres utilisé : 🚧 Infos à venir
+- Liste des Artistes et œuvres utilisés : 🚧 Infos à venir
